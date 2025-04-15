@@ -8,6 +8,10 @@ public class Item {
 
 	public int quality;
 
+	private static final String STRING_PREFIX = "name=";
+	private static final String STRING_BREAKS = ", ";
+	private static final String LINE_FEED = "\n";
+
 	public Item(String name, int sellIn, int quality) {
 		this.name = name;
 		this.sellIn = sellIn;
@@ -16,8 +20,8 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return "\n name=" + name + ", " + sellIn + ", " + quality + "\n" ;
+		return LINE_FEED + STRING_PREFIX + name + STRING_BREAKS + sellIn + STRING_BREAKS + quality + LINE_FEED;
 	}
-	
-	
+
+
 }
